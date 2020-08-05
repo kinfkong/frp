@@ -302,6 +302,6 @@ func (svr *Service) GetProxyConfigs() map[string]config.ProxyConf {
 	return svr.pxyCfgs
 }
 
-func (svr *Service) GetClientCommandConf() config.ClientCommonConf {
+func (svr *Service) GetClientCommonConf() config.ClientCommonConf {
 	return svr.cfg
 }
