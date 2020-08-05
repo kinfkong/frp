@@ -300,5 +300,8 @@ func (svr *Service) Close() {
 
 func (svr *Service) GetProxyConfigs() map[string]config.ProxyConf {
 	return svr.pxyCfgs
+}
 
+func (svr *Service) GetClientCommandConf() config.ClientCommonConf {
+	return svr.cfg
 }
