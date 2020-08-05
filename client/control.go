@@ -366,3 +366,7 @@ func (ctl *Control) ReloadConf(pxyCfgs map[string]config.ProxyConf, visitorCfgs 
 	ctl.pm.Reload(pxyCfgs)
 	return nil
 }
+
+func (ctl *Control) GetProxyManager() *proxy.ProxyManager {
+	return ctl.pm
+}

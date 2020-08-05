@@ -297,3 +297,8 @@ func (svr *Service) Close() {
 	svr.ctl.Close()
 	svr.cancel()
 }
+
+func (svr *Service) GetProxyConfigs() map[string]config.ProxyConf {
+	return svr.pxyCfgs
+
+}
