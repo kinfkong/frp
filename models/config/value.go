@@ -13,6 +13,10 @@ var (
 )
 
 func init() {
+	doinit()
+}
+
+func doinit() {
 	glbEnvs = make(map[string]string)
 	envs := os.Environ()
 	for _, env := range envs {
@@ -29,6 +33,7 @@ type Values struct {
 }
 
 func GetValues() *Values {
+	doinit()
 	return &Values{
 		Envs: glbEnvs,
 	}
